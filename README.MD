@@ -1,5 +1,5 @@
 # hym-react-cli
-![version](https://img.shields.io/badge/version-2.0.0-green)
+![version](https://img.shields.io/badge/version-2.0.1-green)
 
 # 说明
 
