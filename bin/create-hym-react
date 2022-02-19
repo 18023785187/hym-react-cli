@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+const program = require('commander')
+const { promisify } = require('util')
+const figlet = promisify(require('figlet'))
+const chalk = require('chalk')
+const create = require('../lib/create')
+
+const packageJson = require('../package.json')
+program.version(packageJson.version, '-v, --V', '输出版本号')
+
+program
+    .argument('<projectName>')
+    .option('--template <template>', '可选模板, <template>内填入使用的模板, 以逗号隔开, 如果不填默认为不配置模板。可选值: ts,cesium,stylus,dll,all。all为配置所有模板')
+    .description('React + Ts + Stylus + Cesium + dll脚手架')
+    .action(async (projectName, options) => {
+        const message = await figlet(`create   ${projectName}`)
+        console.log(chalk.green(message))
+        // 过滤无用的配置项
+        const template = ['cesium', 'stylus', 'dll']
+        const split = [...new Set(options.template?.split(','))]
+        if (split.includes('all')) {
+            await create(projectName, true, template)
+        } else {
+            await create(projectName, split.includes('ts'), split.filter(item => template.includes(item)))
+        }
+    })
+
+program.parse(process.argv)
