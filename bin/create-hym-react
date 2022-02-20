@@ -16,7 +16,7 @@ program
         const message = await figlet(`create   ${projectName}`)
         console.log(chalk.rgb(255, 192, 203)(message))
         setTimeout(() => {
-            console.log(chalk.blue(`hym-react-cli v${packageJson.version}`))
+            console.log(chalk.blue(`🚀 hym-react-cli v${packageJson.version}`))
             setTimeout(async () => {
                 // 过滤无用的配置项
                 const template = ['cesium', 'stylus', 'dll']
