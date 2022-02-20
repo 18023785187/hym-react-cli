@@ -1,16 +1,20 @@
 # hym-react-cli
-![version](https://img.shields.io/badge/version-2.0.3-green)
+<a href="https://www.npmjs.com/package/hym-react-cli"><img src="https://img.shields.io/npm/v/hym-react-cli.svg" alt="Version"></a>
+<a href="https://npmcharts.com/compare/hym-react-cli?minimal=true"><img src="https://img.shields.io/npm/dm/hym-react-cli.svg" alt="Downloads"></a>
+<a href="https://github.com/18023785187/hym-react-cli/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/hym-react-cli.svg" alt="License"></a>
+<a href="https://github.com/18023785187/hym-react-cli/search?l=javascript"><img src="https://img.shields.io/github/languages/top/18023785187/hym-react-cli.svg" alt="TopLang"></a>
 
-# 说明
+### 🚀 基于create-react-app的React + Ts + Stylus + Cesium + dll集成脚手架, 可根据个人需要一键配置可选模板
 
-    基于create-react-app的React + Ts + Stylus + Cesium + dll集成脚手架, 可根据个人需要一键配置可选模板
-    优点: 一键配置可选模板，自动安装依赖，生成文件夹目录
+一键配置可选模板，自动安装依赖，生成文件夹目录
 
 # 使用
 
-    npm i -g hym-react-cli
+```
+npm i -g hym-react-cli
 
-    npx create-hym-react <projectName> --template <template>
+npx create-hym-react <projectName> --template <template>
+```
 
 ```javascript
 <projectName> 项目名称
@@ -18,6 +22,12 @@
 
 事例: create-hym-react demo --template ts,stylus
 ```
+
+# 杂项
+
+如果在windos上遇到C:\Users\xxx\AppData\Roaming\npm\create-hym-react.ps1，禁止在本系统上运行脚本。
+
+请在CMD执行 set-ExecutionPolicy RemoteSigned
 
 ## 扩展webpack
 
