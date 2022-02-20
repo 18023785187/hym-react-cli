@@ -1,6 +1,6 @@
 {
   "name": "hym-react-cli",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "React + Ts + Stylus + Cesium + dll脚手架",
   "main": "index.js",
   "scripts": {
