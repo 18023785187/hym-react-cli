@@ -14,15 +14,20 @@ program
     .description('React + Ts + Stylus + Cesium + dll脚手架')
     .action(async (projectName, options) => {
         const message = await figlet(`create   ${projectName}`)
-        console.log(chalk.green(message))
-        // 过滤无用的配置项
-        const template = ['cesium', 'stylus', 'dll']
-        const split = [...new Set(options.template?.split(','))]
-        if (split.includes('all')) {
-            await create(projectName, true, template)
-        } else {
-            await create(projectName, split.includes('ts'), split.filter(item => template.includes(item)))
-        }
+        console.log(chalk.rgb(255, 192, 203)(message))
+        setTimeout(() => {
+            console.log(chalk.blue(`create-hym-react v${packageJson.version}`))
+            setTimeout(async () => {
+                // 过滤无用的配置项
+                const template = ['cesium', 'stylus', 'dll']
+                const split = [...new Set(options.template?.split(','))]
+                if (split.includes('all')) {
+                    await create(projectName, true, template)
+                } else {
+                    await create(projectName, split.includes('ts'), split.filter(item => template.includes(item)))
+                }
+            }, 1000)
+        }, 1000)
     })
 
 program.parse(process.argv)
